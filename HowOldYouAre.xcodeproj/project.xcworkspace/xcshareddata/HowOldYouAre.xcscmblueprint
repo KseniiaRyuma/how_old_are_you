@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "53F5B790AC526CBEC6916C53C1BC0429518DB41E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "53F5B790AC526CBEC6916C53C1BC0429518DB41E" : 9223372036854775807,
+    "D07563CBA3368644A9F8774AC8537375A3C840AB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "450EF2FF-E252-44DC-9182-7A375030986B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "53F5B790AC526CBEC6916C53C1BC0429518DB41E" : "how_old_are_you\/",
+    "D07563CBA3368644A9F8774AC8537375A3C840AB" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HowOldYouAre",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HowOldYouAre.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/KseniiaRyuma\/how_old_are_you.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "53F5B790AC526CBEC6916C53C1BC0429518DB41E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:KseniiaRyuma\/Angular_ToDoList.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D07563CBA3368644A9F8774AC8537375A3C840AB"
+    }
+  ]
+}

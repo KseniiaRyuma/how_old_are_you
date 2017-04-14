@@ -7,20 +7,24 @@
 //
 
 import UIKit
+import Firebase
+
 
 class SignUpVC: UIViewController {
 
-    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var nameTextfield: UITextField!
     
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var emailTextfield: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
     
-    @IBOutlet weak var `continue`: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     @IBOutlet weak var fb_signUp: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerButton.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         
     }
 
@@ -29,15 +33,32 @@ class SignUpVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func handleRegister(){
+        guard let email = emailTextfield.text else { return }
+        guard let password = passwordTextfield.text else { return }
+        guard let name = nameTextfield.text else { return }
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
+            if error != nil{
+                print(error)
+                return
+            }
+            
+            //successfully authenticated user
+            let dbRef = FIRDatabase.database().reference()
+            let userReference = dbRef.child("Users")
+            let values = ["name" : name, "email": email]
+            userReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                if err != nil{
+                    print(err)
+                    return
+                }
+                print("User saved successfully into Firebase db")
+                self.performSegue(withIdentifier: "signupToMain", sender: self)
+            
+            })
+            
+        })
     }
-    */
 
 }

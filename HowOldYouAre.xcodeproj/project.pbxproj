@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3194C31E9DBA0E000DFC60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C3194C21E9DBA0E000DFC60 /* GoogleService-Info.plist */; };
 		6C37908E1E9863F0002282A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C37908D1E9863F0002282A1 /* AppDelegate.swift */; };
-		6C3790901E9863F0002282A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C37908F1E9863F0002282A1 /* ViewController.swift */; };
 		6C3790931E9863F0002282A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3790911E9863F0002282A1 /* Main.storyboard */; };
 		6C3790951E9863F0002282A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3790941E9863F0002282A1 /* Assets.xcassets */; };
 		6C3790981E9863F0002282A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3790961E9863F0002282A1 /* LaunchScreen.storyboard */; };
 		6C3790A31E9863F0002282A1 /* HowOldYouAreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3790A21E9863F0002282A1 /* HowOldYouAreTests.swift */; };
 		6C3790AE1E9863F0002282A1 /* HowOldYouAreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3790AD1E9863F0002282A1 /* HowOldYouAreUITests.swift */; };
 		6C3790BD1E98697F002282A1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3790BC1E98697F002282A1 /* LoginVC.swift */; };
+		6CDE1DF91E9EC6FE00854C35 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE1DF81E9EC6FE00854C35 /* AppNavigationController.swift */; };
+		6CDE1DFB1EA014DE00854C35 /* UploadPictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE1DFA1EA014DE00854C35 /* UploadPictureVC.swift */; };
+		EBF5A1C9D7B2B421EF47D5CA /* Pods_HowOldYouAre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20FC98A84D8530B790C8E1E /* Pods_HowOldYouAre.framework */; };
 		EF9C4BEA1E99D64400AE140A /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C4BE91E99D64400AE140A /* SignUpVC.swift */; };
 		EF9C4BEF1E99DE5000AE140A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C4BEE1E99DE5000AE140A /* CustomButton.swift */; };
 /* End PBXBuildFile section */
@@ -37,9 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C278EA81EA071BC00380502 /* HowOldYouAre-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HowOldYouAre-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C3194C21E9DBA0E000DFC60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C37908A1E9863EF002282A1 /* HowOldYouAre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowOldYouAre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C37908D1E9863F0002282A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C37908F1E9863F0002282A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C3790921E9863F0002282A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C3790941E9863F0002282A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C3790971E9863F0002282A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,8 +55,15 @@
 		6C3790AD1E9863F0002282A1 /* HowOldYouAreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowOldYouAreUITests.swift; sourceTree = "<group>"; };
 		6C3790AF1E9863F0002282A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C3790BC1E98697F002282A1 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		6CDE1DF81E9EC6FE00854C35 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		6CDE1DFA1EA014DE00854C35 /* UploadPictureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadPictureVC.swift; sourceTree = "<group>"; };
+		85A409DA6A4F4ABDA7DE0FFE /* Pods-HowOldYouAre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowOldYouAre.release.xcconfig"; path = "Pods/Target Support Files/Pods-HowOldYouAre/Pods-HowOldYouAre.release.xcconfig"; sourceTree = "<group>"; };
+		91BDDBB52CFEA33FB57C4C94 /* Pods_HowOldYouAreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowOldYouAreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20FC98A84D8530B790C8E1E /* Pods_HowOldYouAre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowOldYouAre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD6058E82D42AEE66F68C92A /* Pods-HowOldYouAre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowOldYouAre.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HowOldYouAre/Pods-HowOldYouAre.debug.xcconfig"; sourceTree = "<group>"; };
 		EF9C4BE91E99D64400AE140A /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		EF9C4BEE1E99DE5000AE140A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F4764F7DC65CF209A517F48D /* Pods_HowOldYouAreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowOldYouAreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF5A1C9D7B2B421EF47D5CA /* Pods_HowOldYouAre.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +99,8 @@
 				6C3790A11E9863F0002282A1 /* HowOldYouAreTests */,
 				6C3790AC1E9863F0002282A1 /* HowOldYouAreUITests */,
 				6C37908B1E9863EF002282A1 /* Products */,
+				FDD6BB36A7D70D456B15CC6A /* Pods */,
+				D4C7A41B026F965C3FC4B0F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,14 +117,12 @@
 		6C37908C1E9863F0002282A1 /* HowOldYouAre */ = {
 			isa = PBXGroup;
 			children = (
+				6CDE1DF71E9EC68F00854C35 /* App Utilities */,
+				6CDE1DF61E9EC64100854C35 /* Controllers */,
 				EF9C4BEB1E99DB7500AE140A /* Models */,
-				6C3790BB1E98695A002282A1 /* Auth */,
-				6C37908D1E9863F0002282A1 /* AppDelegate.swift */,
-				6C37908F1E9863F0002282A1 /* ViewController.swift */,
 				6C3790911E9863F0002282A1 /* Main.storyboard */,
 				6C3790941E9863F0002282A1 /* Assets.xcassets */,
 				6C3790961E9863F0002282A1 /* LaunchScreen.storyboard */,
-				6C3790991E9863F0002282A1 /* Info.plist */,
 			);
 			path = HowOldYouAre;
 			sourceTree = "<group>";
@@ -142,12 +154,52 @@
 			name = Auth;
 			sourceTree = "<group>";
 		};
+		6CDE1DF61E9EC64100854C35 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C3790BB1E98695A002282A1 /* Auth */,
+				6CDE1DF81E9EC6FE00854C35 /* AppNavigationController.swift */,
+				6CDE1DFA1EA014DE00854C35 /* UploadPictureVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6CDE1DF71E9EC68F00854C35 /* App Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6C37908D1E9863F0002282A1 /* AppDelegate.swift */,
+				6C3194C21E9DBA0E000DFC60 /* GoogleService-Info.plist */,
+				6C3790991E9863F0002282A1 /* Info.plist */,
+			);
+			name = "App Utilities";
+			sourceTree = "<group>";
+		};
+		D4C7A41B026F965C3FC4B0F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A20FC98A84D8530B790C8E1E /* Pods_HowOldYouAre.framework */,
+				F4764F7DC65CF209A517F48D /* Pods_HowOldYouAreTests.framework */,
+				91BDDBB52CFEA33FB57C4C94 /* Pods_HowOldYouAreUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF9C4BEB1E99DB7500AE140A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				EF9C4BEE1E99DE5000AE140A /* CustomButton.swift */,
+				6C278EA81EA071BC00380502 /* HowOldYouAre-Bridging-Header.h */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		FDD6BB36A7D70D456B15CC6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD6058E82D42AEE66F68C92A /* Pods-HowOldYouAre.debug.xcconfig */,
+				85A409DA6A4F4ABDA7DE0FFE /* Pods-HowOldYouAre.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C3790B21E9863F0002282A1 /* Build configuration list for PBXNativeTarget "HowOldYouAre" */;
 			buildPhases = (
+				2849A69C8F69D34E2BECE158 /* [CP] Check Pods Manifest.lock */,
 				6C3790861E9863EF002282A1 /* Sources */,
 				6C3790871E9863EF002282A1 /* Frameworks */,
 				6C3790881E9863EF002282A1 /* Resources */,
+				F9563BF301106E3956E030C8 /* [CP] Embed Pods Frameworks */,
+				31077BBC3A2F2DA73BE57A50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +274,7 @@
 					6C3790891E9863EF002282A1 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = KL82S5VW4Y;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					6C37909D1E9863F0002282A1 = {
@@ -261,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C3790981E9863F0002282A1 /* LaunchScreen.storyboard in Resources */,
+				6C3194C31E9DBA0E000DFC60 /* GoogleService-Info.plist in Resources */,
 				6C3790951E9863F0002282A1 /* Assets.xcassets in Resources */,
 				6C3790931E9863F0002282A1 /* Main.storyboard in Resources */,
 			);
@@ -282,16 +339,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2849A69C8F69D34E2BECE158 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		31077BBC3A2F2DA73BE57A50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HowOldYouAre/Pods-HowOldYouAre-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9563BF301106E3956E030C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HowOldYouAre/Pods-HowOldYouAre-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6C3790861E9863EF002282A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EF9C4BEA1E99D64400AE140A /* SignUpVC.swift in Sources */,
-				6C3790901E9863F0002282A1 /* ViewController.swift in Sources */,
 				6C37908E1E9863F0002282A1 /* AppDelegate.swift in Sources */,
 				6C3790BD1E98697F002282A1 /* LoginVC.swift in Sources */,
 				EF9C4BEF1E99DE5000AE140A /* CustomButton.swift in Sources */,
+				6CDE1DFB1EA014DE00854C35 /* UploadPictureVC.swift in Sources */,
+				6CDE1DF91E9EC6FE00854C35 /* AppNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,28 +547,35 @@
 		};
 		6C3790B31E9863F0002282A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6058E82D42AEE66F68C92A /* Pods-HowOldYouAre.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = KL82S5VW4Y;
 				INFOPLIST_FILE = HowOldYouAre/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryuma.HowOldYouAre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HowOldYouAre/HowOldYouAre-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		6C3790B41E9863F0002282A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A409DA6A4F4ABDA7DE0FFE /* Pods-HowOldYouAre.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = KL82S5VW4Y;
 				INFOPLIST_FILE = HowOldYouAre/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryuma.HowOldYouAre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HowOldYouAre/HowOldYouAre-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
