@@ -230,7 +230,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="9UP-4w-M0E">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="9UP-4w-M0E">
                                 <rect key="frame" x="45" y="101" width="285" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpc-9R-AK5" userLabel="startButton">
@@ -240,6 +240,9 @@
                                     <constraint firstAttribute="width" constant="71" id="TEG-KY-A7E"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="start"/>
+                                <connections>
+                                    <action selector="checkAge:" destination="xYE-4O-VNS" eventType="touchUpInside" id="Ov1-FZ-yuK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbj-WA-EJJ" userLabel="libraryPic">
                                 <rect key="frame" x="275" y="594" width="55" height="46"/>

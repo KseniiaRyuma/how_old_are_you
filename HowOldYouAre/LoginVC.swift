@@ -17,10 +17,10 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if FIRAuth.auth()?.currentUser != nil {
-            self.performSegue(withIdentifier: "loginToMain", sender: self)
-        }
+//
+//        if FIRAuth.auth()?.currentUser != nil {
+//            self.performSegue(withIdentifier: "loginToMain", sender: self)
+//        }
         
         email.layer.backgroundColor = UIColor.white.cgColor
         email.layer.masksToBounds = false
@@ -61,7 +61,7 @@ class LoginVC: UIViewController {
         guard let emailText = email.text else { return }
         guard let passwordText = password.text else { return }
         
-        if emailText != "" && passwordText != ""{ //make sure the fields are not empty
+        if (emailText != "" && passwordText != "") { //make sure the fields are not empty
             FIRAuth.auth()?.signIn(withEmail: emailText, password: passwordText, completion: {(user, error) in
                 if error == nil{
                     self.performSegue(withIdentifier: "loginToMain", sender: nil)
@@ -80,9 +80,5 @@ class LoginVC: UIViewController {
             self.present(alert, animated: true, completion: nil)
             
         }
-
-        
     }
-    
-
 }
