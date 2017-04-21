@@ -17,10 +17,10 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        if FIRAuth.auth()?.currentUser != nil {
-//            self.performSegue(withIdentifier: "loginToMain", sender: self)
-//        }
+
+        if FIRAuth.auth()?.currentUser != nil {
+            self.performSegue(withIdentifier: "loginToMain", sender: self)
+        }
         
         email.layer.backgroundColor = UIColor.white.cgColor
         email.layer.masksToBounds = false
@@ -49,12 +49,13 @@ class LoginVC: UIViewController {
         loginBut.layer.cornerRadius = 10
         
         
+        loginBut.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-        loginBut.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
     }
     
     func handleLogin() {

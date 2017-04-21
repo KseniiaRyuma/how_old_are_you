@@ -4,7 +4,8 @@
 //
 //  Created by Kseniia Ryuma on 4/13/17.
 //  Copyright © 2017 Kseniia Ryuma. All rights reserved.
-//
+//  Color #684A7C
+
 
 import UIKit
 import ProjectOxfordFace
@@ -14,6 +15,8 @@ class UploadPictureVC: UIViewController, UIImagePickerControllerDelegate, UINavi
    
     @IBOutlet weak var myImageView: UIImageView!
     var hasSelectedImage: Bool = false
+    var numOfFaces: Int = 0
+    var faceSquareCheck: Bool = false
     
     let picker = UIImagePickerController()
 
@@ -22,10 +25,6 @@ class UploadPictureVC: UIViewController, UIImagePickerControllerDelegate, UINavi
         super.viewDidLoad()
         picker.delegate = self
         
-        print(10)
-        print(myImageView.image)
-        print(myImageView)
-
         
     }
 
@@ -35,12 +34,16 @@ class UploadPictureVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     }
     
     @IBAction func photoFromLibrary(_ sender: UIButton) {
+        if (hasSelectedImage && faceSquareCheck){
+            self.clearSubviews()
+        }
         hasSelectedImage = true
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(picker, animated: true, completion: nil)
     }
+    
     @IBAction func shootPhoto(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             hasSelectedImage = true
@@ -108,32 +111,82 @@ class UploadPictureVC: UIViewController, UIImagePickerControllerDelegate, UINavi
             if let img = myImageView.image, let imgData = UIImageJPEGRepresentation(img, 1.0) {
                 MPOFaceServiceClient(subscriptionKey: "d4a20afb3e4844baaf5c59f22a8654c1").detect(with: imgData, returnFaceId: true, returnFaceLandmarks: false, returnFaceAttributes: [1, 2]) { (faces, error) in
                     if let faces = faces, error == nil {
+                        self.faceSquareCheck = true
+                        self.numOfFaces = 0
                         for face in faces {
-                            let scale  = Double(self.myImageView.image!.size.width / (self.myImageView.bounds.width))
-                            let overlay = UIView(frame: CGRect(x: Double(face.faceRectangle.left) / scale, y: Double(face.faceRectangle.top) / scale, width: Double(face.faceRectangle.width) / scale, height: Double(face.faceRectangle.height) / scale))
-                            overlay.layer.borderWidth = 2
-                            overlay.layer.borderColor = UIColor.red.cgColor
-                            self.myImageView.addSubview(overlay)
-                            print(face.faceRectangle)
+                            self.numOfFaces += self.makeFaceSquare(face: face)
                             print(face.attributes.age)
                         }
                     }
                 }
                 
-                
-                /*FaceService.instance.client?.detect(with: imgData, returnFaceId: true, returnFaceLandmarks: false, returnFaceAttributes: [MPOFaceAttributeTypeAge, MPOFaceAttributeTypeGender], completionBlock: { (faces:[MPOFace]?,error: NSError?) in
-                    print(3)
-                    if error == nil {
-                        var faceId: [String]?
-                        for face in faces! {
-                            faceId?.append(face.faceId)
-                            print(face.faceRectangle)
-                            print(face.attributes.age)
-                        }
-                        
-                    }
-                } as! MPOFaceArrayCompletionBlock)*/
             }
         }
     }
+    func makeFaceSquare(face: MPOFace) -> Int{
+        let scaleW  = Double(self.myImageView.image!.size.width / (self.myImageView.bounds.width))
+        let scaleH = Double(self.myImageView.image!.size.height / (self.myImageView.bounds.height))
+        let overlay = UIView(frame: CGRect(x: Double(face.faceRectangle.left) / scaleW, y: Double(face.faceRectangle.top) / scaleH, width: Double(face.faceRectangle.width) / scaleW, height: Double(face.faceRectangle.height) / scaleH))
+        overlay.tag = 100
+        overlay.layer.borderWidth = 2
+        overlay.layer.borderColor = UIColor.white.cgColor
+        
+        let label = UILabel(frame: CGRect(x: (Double(face.faceRectangle.left)/scaleW), y: (Double(face.faceRectangle.top)/scaleH)-25, width: 25, height: 25))
+        label.textAlignment = .center
+        label.textColor = UIColor.black
+        label.backgroundColor = UIColor(white: 1.0, alpha: 0.7)
+        label.text = String(describing: Int(face.attributes.age!))
+        
+        label.tag = 100
+        
+        
+        self.myImageView.addSubview(overlay)
+        self.myImageView.addSubview(label)
+        return 1
+    }
+    
+    func clearSubviews(){
+        for z in 0...self.numOfFaces {
+            print(z)
+            if let viewWithTag = self.myImageView.viewWithTag(100){
+                viewWithTag.removeFromSuperview()
+                print    ("removed")
+            } else {
+                print("tag not found")
+            }
+        }
+    }
+    
+    @IBAction func saveImage(sender: UIBarButtonItem){
+        if (myImageView.image != nil) {
+            // Create the image context to draw in
+            UIGraphicsBeginImageContextWithOptions(myImageView.bounds.size, false, UIScreen.main.scale)
+        
+            // Get that context
+            let context = UIGraphicsGetCurrentContext()
+        
+            // Draw the image view in the context
+            myImageView.layer.render(in: context!)
+        
+            // You may or may not need to repeat the above with the imageView's subviews
+            // Then you grab the "screenshot" of the context
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+            // Be sure to end the context
+            UIGraphicsEndImageContext()
+        
+            // Finally, save the image
+            UIImageWriteToSavedPhotosAlbum(image!, self, #selector(notifyImageSaved), nil)
+        }
+    }
+    
+    //  - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
+
+    func notifyImageSaved(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
+        let alert = UIAlertController(title: "Error", message: "Sign in failed, try again", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
+

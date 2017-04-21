@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZB2-Oo-6rg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,9 +55,6 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ZB2-Oo-6rg" kind="show" identifier="loginToMain" id="Bhk-nn-8Ee"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-lx-EeR">
                                 <rect key="frame" x="88" y="356" width="198.5" height="28"/>
@@ -100,11 +97,12 @@
                         <outlet property="email" destination="tx4-x8-uTn" id="FCv-JT-GQN"/>
                         <outlet property="loginBut" destination="MwC-Gs-oGq" id="Qng-eX-euP"/>
                         <outlet property="password" destination="O5Y-1S-6Zf" id="vfp-SA-lqz"/>
+                        <segue destination="ZB2-Oo-6rg" kind="show" identifier="loginToMain" id="AXO-HH-Y8x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-756" y="-259"/>
+            <point key="canvasLocation" x="-982" y="-45"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="dnK-Oh-RMw">
@@ -171,47 +169,22 @@
                                         <state key="normal" title="Continue">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="ZB2-Oo-6rg" kind="show" identifier="signupToMain" id="uCA-Nk-JQs"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ao7-DJ-wFN">
-                                <rect key="frame" x="178" y="348.5" width="19" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlr-wD-Xhb">
-                                <rect key="frame" x="63" y="401" width="249" height="40"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="249" id="G5S-6L-IIG"/>
-                                    <constraint firstAttribute="height" constant="40" id="zHm-LR-5hJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="SignUP With FB">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zlr-wD-Xhb" firstAttribute="centerX" secondItem="0aD-gg-JK7" secondAttribute="centerX" id="1b9-gA-gm4"/>
                             <constraint firstItem="Lux-lH-Du9" firstAttribute="centerX" secondItem="0aD-gg-JK7" secondAttribute="centerX" id="2V8-jk-oBK"/>
-                            <constraint firstItem="Ao7-DJ-wFN" firstAttribute="centerX" secondItem="0aD-gg-JK7" secondAttribute="centerX" id="PQx-qL-pC1"/>
                             <constraint firstItem="Lux-lH-Du9" firstAttribute="top" secondItem="tH6-at-vk1" secondAttribute="bottom" constant="48" id="c6G-Eb-Tab"/>
-                            <constraint firstItem="zlr-wD-Xhb" firstAttribute="top" secondItem="Ao7-DJ-wFN" secondAttribute="bottom" constant="32" id="jel-k5-d0f"/>
-                            <constraint firstItem="Ao7-DJ-wFN" firstAttribute="centerY" secondItem="0aD-gg-JK7" secondAttribute="centerY" constant="25" id="ksg-mx-5jG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="u8D-hk-txe" id="zdE-O6-kRf"/>
-                        <outlet property="fb_signUp" destination="zlr-wD-Xhb" id="6Af-xX-NWr"/>
                         <outlet property="nameTextfield" destination="9Zz-UQ-2dA" id="GNo-Wg-x8d"/>
                         <outlet property="passwordTextfield" destination="YjT-O4-3tF" id="K1l-rf-2OF"/>
                         <outlet property="registerButton" destination="3bl-LR-PXg" id="myk-nk-ocd"/>
+                        <segue destination="ZB2-Oo-6rg" kind="show" identifier="signupToMain" id="qi9-qt-Gt3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="De1-mf-b6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -287,6 +260,9 @@
                     <navigationItem key="navigationItem" id="1kW-5J-Xwb">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="action" id="ALc-89-OGO">
                             <color key="tintColor" red="0.40784313725490196" green="0.29019607843137252" blue="0.48627450980392156" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveImageWithSender:" destination="xYE-4O-VNS" id="cpf-KN-SqR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -324,6 +300,6 @@
         <image name="start" width="563" height="581"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bhk-nn-8Ee"/>
+        <segue reference="qi9-qt-Gt3"/>
     </inferredMetricsTieBreakers>
 </document>
