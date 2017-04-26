@@ -46,6 +46,9 @@ class UploadPictureVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     
     @IBAction func shootPhoto(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            if (hasSelectedImage && faceSquareCheck){
+                self.clearSubviews()
+            }
             hasSelectedImage = true
             picker.allowsEditing = false
             picker.sourceType = UIImagePickerControllerSourceType.camera
