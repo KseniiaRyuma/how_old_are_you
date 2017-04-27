@@ -186,7 +186,7 @@ class UploadPictureVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     //  - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
 
     func notifyImageSaved(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
-        let alert = UIAlertController(title: "Error", message: "Sign in failed, try again", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Photo is saved in Camera Roll", message: "You can share it with your friends", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
